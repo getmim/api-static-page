@@ -48,7 +48,7 @@ class PageController extends \Api\Controller
 
         $page = SPage::getOne(['id'=>$identity]);
         if(!$page)
-            $page = SPage::getOne(['id'=>$identity]);
+            $page = SPage::getOne(['slug'=>$identity]);
 
         if(!$page)
             return $this->resp(404);
